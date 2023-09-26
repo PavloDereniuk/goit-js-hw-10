@@ -1,0 +1,58 @@
+   body {
+    background-color : rgb(145, 141, 141)
+  }
+
+  p {
+    margin: 0 auto;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .non-active {
+    display: none;
+  }
+  
+  .breed-select {
+    max-width: 300px;
+    border: 2px solid #ffffff;
+    padding: 20 px;
+    
+  } 
+  
+  .cat-info {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+    padding: 120px 120px 120px 30px;
+    text-align: center;
+  }
+  
+  .cat-info img {
+    border-radius: 14px;
+    width: 300px;
+    height: auto;
+  }
+
+  .description {
+    margin-bottom: 10px;
+  }
+
+  .temperament {
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+
+
+ 
