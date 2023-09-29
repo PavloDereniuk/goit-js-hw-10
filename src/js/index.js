@@ -1,5 +1,7 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import { Report, Loading } from 'notiflix';
+import SlimSelect from 'slim-select'
+import "slim-select/dist/slimselect.css";
 
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
@@ -13,8 +15,10 @@ function hideLoading() {
 }
 
 function showError() {
+  catInfo.innerHTML = '';
   Report.failure('Oops!', 'Something went wrong! Try reloading the page!');
 }
+
 
 fetchBreeds()
   .then(data => {
@@ -23,10 +27,15 @@ fetchBreeds()
     );
     breedSelect.innerHTML = option;
     breedSelect.classList.remove('non-active');
+    
+    new SlimSelect({
+        select: '.breed-select',
+      })
   })
   .catch(() => {
     showError();
   });
+
 
 breedSelect.addEventListener('change', e => {
   e.preventDefault();
