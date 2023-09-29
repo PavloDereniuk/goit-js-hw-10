@@ -14,7 +14,6 @@ export function fetchBreeds() {
       return response.data;
     })
     .catch(() => {
-      catInfo.innerHTML = '';
       throw new Error('Oops! Something went wrong while fetching breeds.');
     });
 }
@@ -30,7 +29,6 @@ export function fetchCatByBreed(breedId) {
     })
 
     .catch(() => {
-      catInfo.innerHTML = '';
       throw new Error('Oops! Something went wrong while fetching breeds.');
     });
 }
